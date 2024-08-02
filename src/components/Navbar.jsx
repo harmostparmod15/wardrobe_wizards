@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 
@@ -18,6 +19,9 @@ const Navbar = () => {
                 <img src={logo} alt="logo.png" className="h-24"></img>
             </div>
             <div className=" w-8/12 flex justify-around text-2xl items-center   px-12">
+                <Link to={"/clothing-items"}>
+                    <h1 className=" bg-gradient-to-r  text-[rgb(55,188,248)]      ">Get Started</h1>
+                </Link>
                 <h1 className=" bg-gradient-to-r  text-[rgb(55,188,248)]      ">Home</h1>
                 <h1 className=" bg-gradient-to-r text-[rgb(55,188,248)]  ">About</h1>
                 <h1 className=" bg-gradient-to-r text-[rgb(55,188,248)]  ">Sign Up</h1>
