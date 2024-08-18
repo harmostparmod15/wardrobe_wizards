@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import ClothingItemsUpload from './components/ClothingItemsUpload'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { VirtualWardrobe } from './components/VirtualWardrobe'
 
 const AppLayout = () => {
   return (
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
     element: <ClothingItemsUpload />
   }
   ,
+  {
+    path: "/virtual-wardrobe",
+    element: <VirtualWardrobe />
+  }
 ])
 
 function App() {

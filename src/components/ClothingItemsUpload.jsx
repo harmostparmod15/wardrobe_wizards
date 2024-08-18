@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar"
 
 
 // show successfull image upload modal 
@@ -79,7 +80,9 @@ const ClothingItemsUpload = () => {
         // axios.post("api/uploadfile", formData);
     };
 
-    return (
+    return (<>
+        <Navbar />
+
         <div className="w-full bg-black h-[100vh] flex flex-col gap-10 justify-center items-center">
 
             {/*  success image uplaod modal */}
@@ -102,6 +105,7 @@ const ClothingItemsUpload = () => {
             <button onClick={() => navigate("/virtual-wardrobe")} className={"text-slate-400 text-xl font-bold bg-blue-600 px-8 py-2 " + (showSuccessModal && "blur-xl")}>go to wardrobe</button>
 
         </div>
+    </>
     )
 }
 
